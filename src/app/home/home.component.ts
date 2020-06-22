@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  h1Style: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -14,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   // method referenced on th click event
   firstClick(){
-    console.log('clicked');
+    this.h1Style = true;
   }
 
 }

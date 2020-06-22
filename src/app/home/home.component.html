@@ -1,4 +1,8 @@
-<h1>Home</h1>
+<!-- for a single class use :[class.green]="h1Style" -->
+<h1 [ngClass]="{
+  'green': h1Style,
+  'large': !h1Style
+}">Home</h1>
 
 <!-- event binding :wrapp of (click) event & bind it to "firstclick()" method -->
 <!-- check tutorial for more event types:
