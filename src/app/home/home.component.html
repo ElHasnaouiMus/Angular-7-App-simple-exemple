@@ -1,8 +1,21 @@
-<!-- for a single class use :[class.green]="h1Style" -->
-<h1 [ngClass]="{
+<!-- css Class Binding ->
+  for a single class use :[class.green]="h1Style" -->
+<!-- <h1 [ngClass]="{
   'green': h1Style,
   'large': !h1Style
+}">Home</h1> -->
+
+<!-- Style banding -->
+<!-- single css property  -->
+  <!-- <h1 [style.color]="h1Style ? 'gray': 'black' ">Home</h1> -->
+<!-- multiple css properties  -->
+<h1 [ngStyle]="{
+  'color': h1Style? 'green' : 'black',
+  'font-size': !h1Style? '1em' : '4em'
 }">Home</h1>
+
+
+
 
 <!-- event binding :wrapp of (click) event & bind it to "firstclick()" method -->
 <!-- check tutorial for more event types:
