@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,8 @@ export class HomeComponent implements OnInit {
 
   h1Style: boolean = false;
 
-  constructor() { }
+  constructor(private data: DataService) { }
+  
 
   ngOnInit() {
   }
@@ -17,6 +19,7 @@ export class HomeComponent implements OnInit {
   // method referenced on th click event
   firstClick(){
     this.h1Style = true;
+    this.data.firstClick();
   }
 
 }
